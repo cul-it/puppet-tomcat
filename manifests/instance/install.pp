@@ -104,7 +104,8 @@ define tomcat::instance::install(
 
         # Tomcat usually write there
         "${catalina_base}/logs":
-          ensure => directory,
+          ensure => link,
+          target => "${base::logroot}/tomcat",
           owner  => $owner,
           group  => $group,
           mode   => $logs_mode,

@@ -1,6 +1,9 @@
 
 . $CATALINA_BASE/bin/setenv-local.sh
 
+
+export CLASSPATH=/cul/app/tomcat/<%= @name %>/lib/cul/*
+
 export JAVA_OPTS="-Dsun.java2d.opengl=${DSUN_JAVA2D_OPENGL} \
                   -Djava.awt.headless=${DJAVA_AWT_HEADLESS} \
                   -Xmx${JAVA_XMX} \
