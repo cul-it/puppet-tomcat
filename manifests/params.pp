@@ -29,9 +29,21 @@ class tomcat::params {
           $commons_logging_package = 'jakarta-commons-logging'
         }
 
+        '2016': {
+          $version = '6'
+          $systemd = false
+          $commons_logging_package = 'jakarta-commons-logging'
+        }
+
         '7': {
           $version = '7'
           $systemd = true
+          $commons_logging_package = 'apache-commons-logging'
+        }
+
+        '2017': {
+          $version = '7'
+          $systemd = false
           $commons_logging_package = 'apache-commons-logging'
         }
 
